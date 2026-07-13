@@ -22,7 +22,8 @@ public class Essential : MonoBehaviour
         if(!enableDebugInput) return;
 
         //Game State Manager
-        if(Keyboard.current.spaceKey.wasPressedThisFrame) GameStateManager.Instance.EndGame();
+        if(Keyboard.current.spaceKey.wasPressedThisFrame) GameStateManager.Instance.ShowMainMenu();
+        if(Keyboard.current.escapeKey.wasPressedThisFrame) GameStateManager.Instance.TogglePause();
 
         //Audio Manager
         if(Keyboard.current.digit1Key.wasPressedThisFrame){

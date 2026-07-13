@@ -5,10 +5,16 @@ using System.IO;
 [Serializable]
 public class GameSaveData
 {
+    //Volume
     public float masterVolume = 1f;
     public float bgmVolume = 0.8f;
     public float sfxVolume = 1f;
     public float uiVolume = 1f;
+    //Resolution
+    public int resolutionIndex;
+    public int languageIndex;
+    public bool useFullScreen;
+    //Misc
     public int highScore;
     public bool hasCompletedTutorial;
 }

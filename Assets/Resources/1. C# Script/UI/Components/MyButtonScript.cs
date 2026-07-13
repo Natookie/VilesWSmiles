@@ -12,6 +12,7 @@ public class MybuttonScript : MonoBehaviour
 
     [Header("EVENT")]
     [SerializeField] private UnityEvent onClick = new UnityEvent();
+    [SerializeField] private bool waitForAnimation = true;
 
     private MyButtonVisual vis;
     private Transform contentTransform;
@@ -22,8 +23,34 @@ public class MybuttonScript : MonoBehaviour
     private Coroutine clickRoutine;
     bool hasIcon;
 
-    void Awake(){
-        SyncButton();
+    void Awake() => SyncButton();
+    void OnEnable() => StartCoroutine(ResetToDefaultState());
+    void OnDisable() => StopAllRoutine();
+
+    void StopAllRoutine(){
+        if(clickRoutine != null){
+            StopCoroutine(clickRoutine);
+            clickRoutine = null;
+        }
+        if(hoverRoutine != null){
+            StopCoroutine(hoverRoutine);
+            hoverRoutine = null;
+        }
+        if(scaleRoutine != null){
+            StopCoroutine(scaleRoutine);
+            scaleRoutine = null;
+        }
+    }
+
+    IEnumerator ResetToDefaultState(){
+        if(vis == null) yield return null;
+        yield return new WaitForEndOfFrame();
+
+        contentTransform.localScale = originalScale;
+        contentTransform.localPosition = originalPosition;
+        vis.content.Color = vis.content_unhoverColor;
+        vis.label.Color = vis.label_unhoverColor;
+        if(hasIcon) vis.icon.Color = vis.icon_unhoverColor;
     }
 
     void HandleClicked(Gesture.OnClick evt){
@@ -60,6 +87,8 @@ public class MybuttonScript : MonoBehaviour
             iconStartColor = vis.icon.Color;
             iconTargetColor = vis.icon_clickedColor;
         }
+
+        if(!waitForAnimation) onClick.Invoke();
 
         while(elapsed < sDuration || elapsed < cDuration){
             elapsed += Time.deltaTime;
@@ -104,8 +133,10 @@ public class MybuttonScript : MonoBehaviour
         vis.label.Color = vis.label_unhoverColor;
         if(hasIcon) vis.icon.Color = vis.icon_unhoverColor;
 
-        yield return new WaitForSeconds(vis.scaleDuration);
-        onClick.Invoke();
+        if(waitForAnimation){
+            yield return new WaitForSeconds(vis.scaleDuration);
+            onClick.Invoke();
+        }
     }
 
     IEnumerator AnimateHoverIn(){
@@ -202,7 +233,7 @@ public class MybuttonScript : MonoBehaviour
         vis.content.Color = vis.content_unhoverColor;
         vis.label.Color = vis.label_unhoverColor;
 
-        bool hasIcon = vis.icon != null;
+        hasIcon = vis.icon != null;
         if(hasIcon) vis.icon.Color = vis.icon_unhoverColor;
     }
 }

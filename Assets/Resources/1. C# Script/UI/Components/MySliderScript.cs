@@ -26,6 +26,7 @@ public class MySliderScript : MonoBehaviour
         BGMVolume,
         SFXVolume,
         UIVolume,
+        Resolution,
         Default
     }
     [ShowIf("needBridge")][SerializeField] private SliderType type = SliderType.Default;
@@ -174,6 +175,10 @@ public class MySliderScript : MonoBehaviour
             case SliderType.BGMVolume: AudioManager.Instance.SetBGMVolume(normalizedValue); break;
             case SliderType.SFXVolume: AudioManager.Instance.SetSFXVolume(normalizedValue); break;
             case SliderType.UIVolume: AudioManager.Instance.SetUIVolume(normalizedValue); break;
+            case SliderType.Resolution:
+                SaveManager.Instance.CurrentData.resolutionIndex = Mathf.RoundToInt(normalizedValue * (config.stepCount - 1));
+                SaveManager.Instance.Save();
+                break;
         }
     }
 
@@ -183,6 +188,10 @@ public class MySliderScript : MonoBehaviour
             case SliderType.BGMVolume: normalizedValue = SaveManager.Instance.CurrentData.bgmVolume; break;
             case SliderType.SFXVolume: normalizedValue = SaveManager.Instance.CurrentData.sfxVolume; break;
             case SliderType.UIVolume: normalizedValue = SaveManager.Instance.CurrentData.uiVolume; break;
+            case SliderType.Resolution: 
+                float step = config.stepCount > 1 ? 1f / (config.stepCount - 1) : 1f;
+                normalizedValue = SaveManager.Instance.CurrentData.resolutionIndex * step;
+                break;
             default: normalizedValue = Mathf.Clamp01(value); break;
         }
 

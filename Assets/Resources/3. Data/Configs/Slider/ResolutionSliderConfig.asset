@@ -20,3 +20,6 @@ MonoBehaviour:
   - Low
   - Med
   - High
+  UsingWord: 1
+  MaxCount: 3
+  StepCount: 3

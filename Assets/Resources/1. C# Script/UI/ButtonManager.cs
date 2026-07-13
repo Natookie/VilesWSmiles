@@ -11,13 +11,19 @@ public class ButtonManager : MonoBehaviour
         asm ??= AdditiveSceneManager.Instance;
     }
 
-    public void OnClickButton1() => GameStateManager.Instance.StartGame("GameScene");
-    public void OnClickButton2() => asm.LoadScene("ShopScene");
-    public void OnClickButton3(){
+    #region PUBLIC FUNCTION
+    //Main Menus
+    public void Evt_AddGameScene() => GameStateManager.Instance.StartGame();
+    public void Evt_AddShopScene() => GameStateManager.Instance.OpenShop();
+    public void Evt_ExitGame(){
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
         #else
             Application.Quit();
         #endif
     }
+
+    //Setting
+    public void SwitchLanguage() => LocalizationManager.Instance.SetLanguage((LocalizationManager.Instance.GetCurrentLanguageIndex() + 1) % LocalizationManager.Instance.GetSupportedLanguages().Length);
+    #endregion
 }
