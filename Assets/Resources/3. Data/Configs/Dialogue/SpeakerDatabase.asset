@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f841f9d7f933a3d498975d6951a5a6e1, type: 3}
+  m_Name: SpeakerDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::SpeakerDatabase
+  speakers:
+  - displayName: Giovanna
+    type: 0
+    icon: {fileID: 2800000, guid: 7cae098cc4cced74bb661593af6cfbf7, type: 3}
+    textColor: {r: 1, g: 0.68235296, b: 0.7137255, a: 1}
+  - displayName: Giovanni Falcone
+    type: 3
+    icon: {fileID: 2800000, guid: 0e99005a6e176e445a4f1cc5981fa582, type: 3}
+    textColor: {r: 0.5411765, g: 0.92156863, b: 0.94509804, a: 1}
+  - displayName: Narrator (Agus Ketoprak)
+    type: 2
+    icon: {fileID: 2800000, guid: 1e4fa5161ff302947adff9d5ccbd344b, type: 3}
+    textColor: {r: 0.22352941, g: 0.47058824, b: 0.65882355, a: 1}
+  - displayName: Marco Dimarlo
+    type: 1
+    icon: {fileID: 2800000, guid: 48173b4f2fe4dcd4081cbbb0973cc0ad, type: 3}
+    textColor: {r: 0.3529412, g: 0.3254902, b: 0.3254902, a: 1}
+  - displayName: Fabiano Lombardy
+    type: 4
+    icon: {fileID: 2800000, guid: 40ceb1198b3f5e641beb529b3a22c89e, type: 3}
+    textColor: {r: 0.44313726, g: 0.6666667, b: 0.20392157, a: 1}
+  - displayName: NPC
+    type: 5
+    icon: {fileID: 2800000, guid: 48173b4f2fe4dcd4081cbbb0973cc0ad, type: 3}
+    textColor: {r: 0.3529412, g: 0.3254902, b: 0.3254902, a: 1}

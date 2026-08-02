@@ -8,13 +8,25 @@ public enum BGMTrack
 
 public enum SFXSound
 {
-    SFXText
+    DoorChime,
+    AddIce,
+    Cut,
+    Garnish,
+    Juice,
+    PouringLiquid,
+    Shake,
+    Stir
 }
 
 public enum UISound
 {
     ButtonClick,
-    ButtonHover
+    ButtonHover,
+    PanelOpen,
+    SliderDrag,
+    ObjectFailed,
+    ObjectHovered,
+    CustomerOrdered
 }
 
 [CreateAssetMenu(fileName = "AudioLibrary", menuName = "Audio/Audio Library")]

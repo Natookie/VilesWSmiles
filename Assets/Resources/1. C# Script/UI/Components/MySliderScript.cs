@@ -27,6 +27,7 @@ public class MySliderScript : MonoBehaviour
         SFXVolume,
         UIVolume,
         Resolution,
+        Brightness,
         Default
     }
     [ShowIf("needBridge")][SerializeField] private SliderType type = SliderType.Default;
@@ -76,6 +77,7 @@ public class MySliderScript : MonoBehaviour
         if(isDragging) return;
         vis.draggable.Color = vis.draggable_hoverColor;
         vis.data.Color = vis.data_hoverColor;
+        AudioManager.Instance.PlayUI(UISound.ButtonHover);
     }
 
     void HandleUnhover(Gesture.OnUnhover evt){
@@ -83,6 +85,9 @@ public class MySliderScript : MonoBehaviour
         vis.draggable.Color = vis.draggable_unhoverColor;
         vis.data.Color = vis.data_unhoverColor;
     }
+
+    private float lastDragSoundTime;
+    private float dragSoundCooldown = 0.05f;
 
     void HandleDrag(Gesture.OnDrag evt){
         if(!isDragging) return;
@@ -112,6 +117,11 @@ public class MySliderScript : MonoBehaviour
 
         UpdateFill();
         UpdateDataText();
+
+        if(Time.time - lastDragSoundTime >= dragSoundCooldown){
+            AudioManager.Instance.PlayUI(UISound.SliderDrag);
+            lastDragSoundTime = Time.time;
+        }
     }
 
     IEnumerator SnapToValue(float targetValue){
@@ -179,6 +189,12 @@ public class MySliderScript : MonoBehaviour
                 SaveManager.Instance.CurrentData.resolutionIndex = Mathf.RoundToInt(normalizedValue * (config.stepCount - 1));
                 SaveManager.Instance.Save();
                 break;
+            case SliderType.Brightness:
+                float brightness = Mathf.Lerp(0.25f, 1.25f, normalizedValue);
+                LightManager.Instance.SetLight(brightness);
+                SaveManager.Instance.CurrentData.brightness = brightness;
+                SaveManager.Instance.Save();
+                break;
         }
     }
 
@@ -191,6 +207,10 @@ public class MySliderScript : MonoBehaviour
             case SliderType.Resolution: 
                 float step = config.stepCount > 1 ? 1f / (config.stepCount - 1) : 1f;
                 normalizedValue = SaveManager.Instance.CurrentData.resolutionIndex * step;
+                break;
+            case SliderType.Brightness:
+                float savedBrightness = SaveManager.Instance.CurrentData.brightness;
+                normalizedValue = Mathf.InverseLerp(0.25f, 1.25f, savedBrightness);
                 break;
             default: normalizedValue = Mathf.Clamp01(value); break;
         }

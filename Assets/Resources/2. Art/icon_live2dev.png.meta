@@ -1,0 +1,710 @@
+fileFormatVersion: 2
+guid: e77048417fbfc3e43a7fde2feba6048a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2603974797791102816
+    second: icon_live2dev_0
+  - first:
+      213: 8506023501229664274
+    second: icon_live2dev_1
+  - first:
+      213: 9033854482970351287
+    second: icon_live2dev_2
+  - first:
+      213: -577556991286064868
+    second: icon_live2dev_3
+  - first:
+      213: 5371023802205831818
+    second: icon_live2dev_4
+  - first:
+      213: -8338543508174570930
+    second: icon_live2dev_5
+  - first:
+      213: 356963544161245213
+    second: icon_live2dev_6
+  - first:
+      213: -1511801487754369380
+    second: icon_live2dev_7
+  - first:
+      213: 2445765220930063670
+    second: icon_live2dev_8
+  - first:
+      213: 1123831491138422450
+    second: icon_live2dev_9
+  - first:
+      213: -967401315445690425
+    second: icon_live2dev_10
+  - first:
+      213: -8148413863357250093
+    second: icon_live2dev_11
+  - first:
+      213: -1561288484618895675
+    second: icon_live2dev_12
+  - first:
+      213: -1770576994109885414
+    second: icon_live2dev_13
+  - first:
+      213: -3708820727560127371
+    second: icon_live2dev_14
+  - first:
+      213: 6807274513630691835
+    second: icon_live2dev_15
+  - first:
+      213: -5111065457317000896
+    second: icon_live2dev_16
+  - first:
+      213: 1455351913081675666
+    second: icon_live2dev_17
+  - first:
+      213: 5132291820202698451
+    second: icon_live2dev_18
+  - first:
+      213: 855204551966684732
+    second: icon_live2dev_19
+  - first:
+      213: 5849231550957436151
+    second: icon_live2dev_20
+  - first:
+      213: 7884411330889584315
+    second: icon_live2dev_21
+  - first:
+      213: 5220428739872125184
+    second: icon_live2dev_22
+  - first:
+      213: 7931856681576748244
+    second: icon_live2dev_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Recipe_Sugar
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 1061
+        width: 114
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 067886a384d232420800000000000000
+      internalID: 2603974797791102816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_SugarCube
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1011
+        width: 114
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2182be9be477b0670800000000000000
+      internalID: 8506023501229664274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_Orange
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1018
+        width: 150
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b69402f9c2be5d70800000000000000
+      internalID: 9033854482970351287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_Lime
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 1036
+        width: 136
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19c9d8f9fa1cf7f0800000000000000
+      internalID: -577556991286064868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_Lemon
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 1030
+        width: 191
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4a7d1bdbda874c80800000000000000
+      internalID: -8338543508174570930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_Shaker
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 736
+        width: 98
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d18de7fb37034f400800000000000000
+      internalID: 356963544161245213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_OrangePeel
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 754
+        width: 96
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c966e778e80050be0800000000000000
+      internalID: -1511801487754369380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_LemonTweezer
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 755
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63d8a8d928a11f120800000000000000
+      internalID: 2445765220930063670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_LimeJuice
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 867
+        width: 166
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b604b079c6a89f00800000000000000
+      internalID: 1123831491138422450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_LimePeel
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 766
+        width: 118
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d509bf63c40bee80800000000000000
+      internalID: -8148413863357250093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_LemonJuice
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 657
+        width: 189
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cef1623560355ae0800000000000000
+      internalID: -1561288484618895675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_Bitters
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 370
+        width: 111
+        height: 286
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14f992da95ad67e0800000000000000
+      internalID: -1770576994109885414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_Ice
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 416
+        width: 195
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c3c2ec23f978cc0800000000000000
+      internalID: -3708820727560127371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_ChunkyIce
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 361
+        width: 265
+        height: 324
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf107898a1c487e50800000000000000
+      internalID: 6807274513630691835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_OrangeJuice
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 312
+        width: 234
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 049c9d0db09d119b0800000000000000
+      internalID: -5111065457317000896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_Vodka
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 123
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29f1b6aaad2723410800000000000000
+      internalID: 1455351913081675666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_Rum
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1
+        width: 140
+        height: 275
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d623dae730993740800000000000000
+      internalID: 5132291820202698451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_Whiskey
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 11
+        width: 108
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c36754a420c4edb00800000000000000
+      internalID: 855204551966684732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_Gin
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 12
+        width: 96
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fc33d3ea15ac2150800000000000000
+      internalID: 5849231550957436151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_Cola
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 10
+        width: 69
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbe0db0055e0b6d60800000000000000
+      internalID: 7884411330889584315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_Soda
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 10
+        width: 69
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0017157a740b27840800000000000000
+      internalID: 5220428739872125184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipe_Tonic
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 16
+        width: 110
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d4d0ba80ad931e60800000000000000
+      internalID: 7931856681576748244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c1edefab250850b49826d63bcd959ff2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Recipe_Bitters: -1770576994109885414
+      Recipe_ChunkyIce: 6807274513630691835
+      Recipe_Cola: 7884411330889584315
+      Recipe_Gin: 5849231550957436151
+      Recipe_Ice: -3708820727560127371
+      Recipe_Lemon: -8338543508174570930
+      Recipe_LemonJuice: -1561288484618895675
+      Recipe_LemonTweezer: 2445765220930063670
+      Recipe_Lime: -577556991286064868
+      Recipe_LimeJuice: 1123831491138422450
+      Recipe_LimePeel: -8148413863357250093
+      Recipe_Orange: 9033854482970351287
+      Recipe_OrangeJuice: -5111065457317000896
+      Recipe_OrangePeel: -1511801487754369380
+      Recipe_Rum: 5132291820202698451
+      Recipe_Shaker: 356963544161245213
+      Recipe_Soda: 5220428739872125184
+      Recipe_Sugar: 2603974797791102816
+      Recipe_SugarCube: 8506023501229664274
+      Recipe_Tonic: 7931856681576748244
+      Recipe_Vodka: 1455351913081675666
+      Recipe_Whiskey: 855204551966684732
+      icon_live2dev_10: -967401315445690425
+      icon_live2dev_4: 5371023802205831818
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

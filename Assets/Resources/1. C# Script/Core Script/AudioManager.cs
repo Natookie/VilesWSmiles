@@ -22,6 +22,12 @@ public class AudioManager : MonoBehaviour
     [SerializeField, Range(0f, 1f)] private float defaultSFXVolume = 1f;
     [SerializeField, Range(0f, 1f)] private float defaultUIVolume = 1f;
 
+    [Header("VARIATION")]
+    [SerializeField] private Vector2 sfxPitchRange = new Vector2(0.9f, 1.1f);
+    [SerializeField] private Vector2 sfxVolumeRange = new Vector2(0.8f, 1f);
+    [SerializeField] private Vector2 uiPitchRange = new Vector2(0.95f, 1.05f);
+    [SerializeField] private Vector2 uiVolumeRange = new Vector2(0.9f, 1f);
+
     private const string MasterParam = "MasterVolume";
     private const string BGMVolParam = "BGMVolume";
     private const string SFXVolParam = "SFXVolume";
@@ -79,17 +85,29 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySFX(SFXSound sound){
         AudioClip clip = audioLibrary.GetSFX(sound);
-        if(clip != null) sfxSource.PlayOneShot(clip);
+        if(clip == null) return;
+
+        sfxSource.pitch = Random.Range(sfxPitchRange.x, sfxPitchRange.y);
+        sfxSource.PlayOneShot(clip, Random.Range(sfxVolumeRange.x, sfxVolumeRange.y));
+        sfxSource.pitch = 1f;
     }
 
     public void PlaySFX(SFXSound sound, float volumeScale){
         AudioClip clip = audioLibrary.GetSFX(sound);
-        if(clip != null) sfxSource.PlayOneShot(clip, volumeScale);
+        if(clip == null) return;
+
+        sfxSource.pitch = Random.Range(sfxPitchRange.x, sfxPitchRange.y);
+        sfxSource.PlayOneShot(clip, volumeScale * Random.Range(sfxVolumeRange.x, sfxVolumeRange.y));
+        sfxSource.pitch = 1f;
     }
 
     public void PlayUI(UISound sound){
         AudioClip clip = audioLibrary.GetUI(sound);
-        if(clip != null) uiSource.PlayOneShot(clip);
+        if(clip == null) return;
+
+        uiSource.pitch = Random.Range(uiPitchRange.x, uiPitchRange.y);
+        uiSource.PlayOneShot(clip, Random.Range(uiVolumeRange.x, uiVolumeRange.y));
+        uiSource.pitch = 1f;
     }
 
     public void SetMasterVolume(float volume){

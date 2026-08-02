@@ -20,7 +20,7 @@ public class LocalizationManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
+        SetLanguage(SaveManager.Instance.CurrentData.languageIndex);
         BuildEntryMap();
     }
 

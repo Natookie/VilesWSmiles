@@ -11,12 +11,16 @@ public class GameSaveData
     public float sfxVolume = 1f;
     public float uiVolume = 1f;
     //Resolution
-    public int resolutionIndex;
-    public int languageIndex;
-    public bool useFullScreen;
+    public int resolutionIndex = 2;
+    public int languageIndex = 2;
+    public float brightness = 0.85f;
+    public bool useFullScreen = true;
     //Misc
-    public int highScore;
-    public bool hasCompletedTutorial;
+    public int accumulatedMoney = 0;
+    public int shiftIndex = 0;
+    //State
+    public bool hasCompletedTutorial = false;
+    public bool hasFinishedGame = false;
 }
 
 public class SaveManager : MonoBehaviour

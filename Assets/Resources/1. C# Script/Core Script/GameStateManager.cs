@@ -8,7 +8,6 @@ public enum GameState
     MainMenu,
     Playing,
     Shop,
-    Paused
 }
 
 public class GameStateManager : MonoBehaviour
@@ -31,7 +30,7 @@ public class GameStateManager : MonoBehaviour
 
     public System.Action<GameState, GameState> OnStateChanged;
 
-    private GameState stateBeforePause;
+    private GameState previousState;
 
     void Awake(){
         if(Instance != null && Instance != this){
@@ -43,20 +42,14 @@ public class GameStateManager : MonoBehaviour
     }
 
     void Start(){
-        asm.LoadScene(mainMenuScene);
-        asm.LoadScene(gameScene);
-        asm.LoadScene(shopScene);
-        SceneManager.sceneLoaded += OnSceneLoaded;
         StartCoroutine(InitializeUI());
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     IEnumerator InitializeUI(){
-        yield return new WaitUntil(() =>
-            SceneManager.GetSceneByName(mainMenuScene).isLoaded &&
-            SceneManager.GetSceneByName(gameScene).isLoaded &&
-            SceneManager.GetSceneByName(shopScene).isLoaded
-        );
-
+        yield return StartCoroutine(asm.LoadSceneCoroutine(mainMenuScene));
+        yield return StartCoroutine(asm.LoadSceneCoroutine(gameScene));
+        yield return StartCoroutine(asm.LoadSceneCoroutine(shopScene));
         CacheRootObjects();
         ShowMainMenu();
     }
@@ -70,7 +63,13 @@ public class GameStateManager : MonoBehaviour
             Scene menuScene = SceneManager.GetSceneByName(mainMenuScene);
             if(menuScene.isLoaded){
                 GameObject[] roots = menuScene.GetRootGameObjects();
-                if(roots.Length > 0) mainMenuRoot = roots[0];
+                foreach(GameObject root in roots){
+                    if(root.CompareTag("MainMenuUI")){
+                        mainMenuRoot = root;
+                        break;
+                    }
+                }
+                if(mainMenuRoot == null && roots.Length > 0) mainMenuRoot = roots[0];
             }
         }
 
@@ -78,7 +77,13 @@ public class GameStateManager : MonoBehaviour
             Scene gameSceneRef = SceneManager.GetSceneByName(gameScene);
             if(gameSceneRef.isLoaded){
                 GameObject[] roots = gameSceneRef.GetRootGameObjects();
-                if(roots.Length > 0) gameRoot = roots[0];
+                foreach(GameObject root in roots){
+                    if(root.CompareTag("GameUI")){
+                        gameRoot = root;
+                        break;
+                    }
+                }
+                if(gameRoot == null && roots.Length > 0) gameRoot = roots[0];
             }
         }
 
@@ -86,17 +91,23 @@ public class GameStateManager : MonoBehaviour
             Scene shopSceneRef = SceneManager.GetSceneByName(shopScene);
             if(shopSceneRef.isLoaded){
                 GameObject[] roots = shopSceneRef.GetRootGameObjects();
-                if(roots.Length > 0) shopRoot = roots[0];
+                foreach(GameObject root in roots){
+                    if(root.CompareTag("ShopUI")){
+                        shopRoot = root;
+                        break;
+                    }
+                }
+                if(shopRoot == null && roots.Length > 0) shopRoot = roots[0];
             }
         }
     }
 
     void SetState(GameState newState){
         if(CurrentState == newState) return;
-
-        GameState previousState = CurrentState;
+        previousState = CurrentState;
+        GameState oldState = CurrentState;
         CurrentState = newState;
-        OnStateChanged?.Invoke(previousState, newState);
+        OnStateChanged?.Invoke(oldState, newState);
     }
 
     void HideAll(){
@@ -109,7 +120,6 @@ public class GameStateManager : MonoBehaviour
         HideAll();
         if(mainMenuRoot != null) mainMenuRoot.SetActive(true);
         asm.SetActiveScene(mainMenuScene);
-        Time.timeScale = 1f;
         SetState(GameState.MainMenu);
     }
 
@@ -117,50 +127,56 @@ public class GameStateManager : MonoBehaviour
         HideAll();
         if(gameRoot != null) gameRoot.SetActive(true);
         asm.SetActiveScene(gameScene);
-        Time.timeScale = 1f;
         SetState(GameState.Playing);
     }
 
-    public void OpenShop(){
+    public void OpenRecipe(){
+        previousState = CurrentState;
         HideAll();
         if(shopRoot != null) shopRoot.SetActive(true);
         asm.SetActiveScene(shopScene);
-        Time.timeScale = 1f;
         SetState(GameState.Shop);
+        AudioManager.Instance.PlayUI(UISound.PanelOpen);
     }
 
     public void CloseShop(){
-        HideAll();
-        if(gameRoot != null) gameRoot.SetActive(true);
-        asm.SetActiveScene(gameScene);
-        Time.timeScale = 1f;
-        SetState(GameState.Playing);
-    }
-
-    public void PauseGame(){
-        if(CurrentState == GameState.MainMenu || CurrentState == GameState.Paused) return;
-
-        stateBeforePause = CurrentState;
-        Time.timeScale = 0f;
-        SetState(GameState.Paused);
-    }
-
-    public void ResumeGame(){
-        if(CurrentState != GameState.Paused) return;
-
-        Time.timeScale = 1f;
-        SetState(stateBeforePause);
+        switch(previousState){
+            case GameState.Playing:
+                StartGame();
+                break;
+            case GameState.MainMenu:
+                ShowMainMenu();
+                break;
+            default:
+                ShowMainMenu();
+                break;
+        }
     }
 
     public void TogglePause(){
-        if(CurrentState != GameState.Paused && CurrentState != GameState.MainMenu) PauseGame();
-        else if(CurrentState == GameState.Paused) ResumeGame();
+        if(CurrentState == GameState.Shop){
+            CloseShop();
+            AudioManager.Instance.PlayUI(UISound.PanelOpen);
+            DialogueManager.Instance.TriggerInteraction("CloseRecipeBook");
+            return;
+        }
+        
+        if(CurrentState == GameState.Playing){
+            if(DialogueManager.Instance.IsDialogueVisible()) return;
+            ShowMainMenu();
+            AudioManager.Instance.PlayUI(UISound.PanelOpen);
+            return;
+        }
+        
+        if(CurrentState == GameState.MainMenu){
+            StartGame();
+            AudioManager.Instance.PlayUI(UISound.PanelOpen);
+            return;
+        }
     }
 
-    public void ReturnToMainMenu(){
-        ShowMainMenu();
-    }
-
+    public void ReturnToMainMenu() => ShowMainMenu();
+    
     public void QuitGame(){
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
@@ -173,10 +189,10 @@ public class GameStateManager : MonoBehaviour
 
     #region INSPECTOR BUTTON
     [Button("Load Main Menu", EButtonEnableMode.Playmode)]
-    public void LoadMainMenu() => asm.LoadScene(mainMenuScene);
+    public void LoadMainMenu() => StartCoroutine(asm.LoadSceneCoroutine(mainMenuScene));
     [Button("Load Game", EButtonEnableMode.Playmode)]
-    public void LoadGame() => asm.LoadScene(gameScene);
+    public void LoadGame() => StartCoroutine(asm.LoadSceneCoroutine(gameScene));
     [Button("Load Shop", EButtonEnableMode.Playmode)]
-    public void LoadShop() => asm.LoadScene(shopScene);
+    public void LoadShop() => StartCoroutine(asm.LoadSceneCoroutine(shopScene));
     #endregion
 }

@@ -56,11 +56,13 @@ public class MybuttonScript : MonoBehaviour
     void HandleClicked(Gesture.OnClick evt){
         if(clickRoutine != null) StopCoroutine(clickRoutine);
         clickRoutine = StartCoroutine(AnimateClick());
+        AudioManager.Instance.PlayUI(UISound.ButtonClick);
     }
 
     void HandleHover(Gesture.OnHover evt){
         if(hoverRoutine != null) StopCoroutine(hoverRoutine);
         hoverRoutine = StartCoroutine(AnimateHoverIn());
+        AudioManager.Instance.PlayUI(UISound.ButtonHover);
     }
 
     void HandleUnhover(Gesture.OnUnhover evt){

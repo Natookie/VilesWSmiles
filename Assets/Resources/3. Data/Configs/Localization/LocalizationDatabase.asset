@@ -12,25 +12,1200 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25bb804d3611b4c458cf7867ab3dde04, type: 3}
   m_Name: LocalizationDatabase
   m_EditorClassIdentifier: Assembly-CSharp::LocalizationDatabase
-  supportedLanguages: 0a0000001400000016000000
+  supportedLanguages: 0a0000001400000015000000
   entries:
-  - key: PlayGame
+  - key: Menu_PlayGame
     translations:
-    - Play Game
-    - Main Game
-    - Japan1
-  - key: Shop
+      - Play Game
+      - Gioca
+      - Main Game
+  - key: Menu_Recipe
     translations:
-    - Shop
-    - Toko
-    - Japan2
-  - key: ExitGame
+      - Recipe
+      - Ricette
+      - Resep
+  - key: Menu_About
     translations:
-    - Exit Game
-    - Keluar
-    - Japan3
-  - key: Language
+      - About
+      - Info
+      - Tentang
+  - key: Menu_ExitGame
     translations:
-    - English
-    - Indonesia
-    - Japan
+      - Exit
+      - Esci
+      - Keluar
+  - key: Menu_SkipTutorial
+    translations:
+    - "Mark Tutorial as Completed"
+    - "Segna il tutorial come completato"
+    - "Tandai Tutorial Selesai"
+  - key: Setting_Language
+    translations:
+    - 'Language: English'
+    - 'Lingua: Italiano'
+    - 'Bahasa: Indonesia'
+  - key: Setting_Resolution
+    translations:
+    - Resolution
+    - Risoluzione
+    - Resolusi
+  - key: Setting_Brightness
+    translations:
+    - Brightness
+    - Kecerahan
+    - Kecerahan
+  - key: Setting_FullScreen
+    translations:
+    - Full Screen
+    - Schermo Intero
+    - Layar Penuh
+  - key: Setting_DeleteData
+    translations:
+      - "Reset Save (If Softlocked)"
+      - "Reimposta salvataggio (se bloccato)"
+      - "Reset Data (Jika Softlock)"
+  - key: Cutscene_Boss_Welcome
+    translations:
+    - Welcome, my friend. Please, have a seat.
+    - Benvenuto, amico mio. Prego, siediti.
+    - Selamat datang, temanku. Silakan, duduklah.
+  - key: Cutscene_MC_Silence
+    translations:
+    - ...
+    - ...
+    - ...
+  - key: Cutscene_Boss_DifficultTime
+    translations:
+    - I heard you've been having a difficult time lately.
+    - Ho sentito che ultimamente stai passando un periodo difficile.
+    - Kudengar akhir-akhir ini kamu mengalami masa sulit.
+  - key: Cutscene_MC_DifficultTime
+    translations:
+    - I... have.
+    - Io... sì.
+    - Aku... iya.
+  - key: Cutscene_Boss_Debt
+    translations:
+    - Debt. Bills. A family to feed.
+    - Debiti. Bollette. Una famiglia da mantenere.
+    - Utang. Tagihan. Keluarga yang harus diberi makan.
+  - key: Cutscene_MC_HowKnow
+    translations:
+    - How do you know that?
+    - Come lo sai?
+    - Bagaimana kamu tahu itu?
+  - key: Cutscene_Boss_Business
+    translations:
+    - I make it my business to know when good people need help.
+    - È mio dovere sapere quando le brave persone hanno bisogno di aiuto.
+    - Aku menjadikannya urusanku untuk tahu kapan orang baik membutuhkan bantuan.
+  - key: Cutscene_MC_Silence2
+    translations:
+    - ...
+    - ...
+    - ...
+  - key: Cutscene_Boss_WhyHelp
+    translations:
+    - You're wondering why I'd help a complete stranger.
+    - Ti stai chiedendo perché aiuterei un completo sconosciuto.
+    - Kamu bertanya-tanya mengapa aku membantu orang asing.
+  - key: Cutscene_MC_Yes
+    translations:
+    - Honestly... yes.
+    - Onestamente... sì.
+    - Sejujurnya... iya.
+  - key: Cutscene_Boss_BeenThere
+    translations:
+    - Because I've been where you are.
+    - Perché sono stato dove sei tu.
+    - Karena aku pernah berada di posisimu.
+  - key: Cutscene_Boss_SecondChance
+    translations:
+    - Everyone deserves a second chance.
+    - Tutti meritano una seconda possibilità.
+    - Setiap orang berhak mendapat kesempatan kedua.
+  - key: Cutscene_Boss_So
+    translations:
+    - So...
+    - Quindi...
+    - Jadi...
+  - key: Cutscene_Boss_LendMoney
+    translations:
+    - I'm willing to lend you the money.
+    - Sono disposto a prestarti i soldi.
+    - Aku bersedia meminjamkan uang padamu.
+  - key: Cutscene_MC_Catch
+    translations:
+    - There has to be a catch.
+    - Deve esserci un problema.
+    - Pasti ada syaratnya.
+  - key: Cutscene_Boss_OfCourse
+    translations:
+    - Of course.
+    - Naturalmente.
+    - Tentu saja.
+  - key: Cutscene_Boss_NothingFree
+    translations:
+    - Nothing in life is free.
+    - Niente nella vita è gratis.
+    - Tidak ada yang gratis dalam hidup.
+  - key: Cutscene_Boss_NotToday
+    translations:
+    - But I don't need it back today.
+    - Ma non mi serve indietro oggi.
+    - Tapi aku tidak perlu mengembalikannya hari ini.
+  - key: Cutscene_Boss_FamilyFirst
+    translations:
+    - Take care of your family first.
+    - Prenditi cura prima della tua famiglia.
+    - Jaga keluargamu dulu.
+  - key: Cutscene_Boss_RepaymentLater
+    translations:
+    - We'll discuss repayment later.
+    - Parleremo del rimborso dopo.
+    - Kita akan bicarakan pembayaran nanti.
+  - key: Cutscene_MC_ThankYou
+    translations:
+    - Thank you.
+    - Grazie.
+    - Terima kasih.
+  - key: Cutscene_Boss_DontThank
+    translations:
+    - Don't thank me yet.
+    - Non ringraziarmi ancora.
+    - Jangan berterima kasih dulu.
+  - key: Cutscene_Boss_DontDisappear
+    translations:
+    - Just don't disappear on me.
+    - Basta che non sparire.
+    - Jangan menghilang dariku.
+  - key: Cutscene_System_TimeSkip
+    translations:
+    - Three Months Later...
+    - Tre Mesi Dopo...
+    - Tiga Bulan Kemudian...
+  - key: Cutscene_Boss_WelcomeBack
+    translations:
+    - Welcome back.
+    - Bentornato.
+    - Selamat datang kembali.
+  - key: Cutscene_Boss_FamilyWell
+    translations:
+    - I trust your family is doing well?
+    - Immagino che la tua famiglia stia bene?
+    - Aku yakin keluargamu baik-baik saja?
+  - key: Cutscene_MC_Safe
+    translations:
+    - They're safe...
+    - Sono al sicuro...
+    - Mereka aman...
+  - key: Cutscene_MC_ThanksToYou
+    translations:
+    - Thanks to you.
+    - Grazie a te.
+    - Berkatmu.
+  - key: Cutscene_Boss_Glad
+    translations:
+    - I'm glad to hear that.
+    - Sono contento di sentirlo.
+    - Senang mendengarnya.
+  - key: Cutscene_Boss_Now
+    translations:
+    - Now.
+    - Ora.
+    - Sekarang.
+  - key: Cutscene_Boss_AboutLoan
+    translations:
+    - About your loan.
+    - Riguardo al tuo prestito.
+    - Tentang pinjamanmu.
+  - key: Cutscene_MC_NoMoney
+    translations:
+    - I... I don't have the money yet.
+    - Io... non ho ancora i soldi.
+    - Aku... aku belum punya uangnya.
+  - key: Cutscene_Boss_IKnow
+    translations:
+    - I know.
+    - Lo so.
+    - Aku tahu.
+  - key: Cutscene_Boss_BetterSolution
+    translations:
+    - That's why I have a better solution.
+    - Ecco perché ho una soluzione migliore.
+    - Itulah sebabnya aku punya solusi yang lebih baik.
+  - key: Cutscene_Boss_WorkForMe
+    translations:
+    - Work for me.
+    - Lavora per me.
+    - Bekerjalah untukku.
+  - key: Cutscene_MC_DoingWhat
+    translations:
+    - Doing what?
+    - Facendo cosa?
+    - Melakukan apa?
+  - key: Cutscene_Boss_Bartending
+    translations:
+    - Bartending.
+    - Barista.
+    - Bartending.
+  - key: Cutscene_MC_Bartending
+    translations:
+    - ...Bartending?
+    - ...Barista?
+    - ...Bartending?
+  - key: Cutscene_Boss_HonestWork
+    translations:
+    - It's honest work.
+    - È un lavoro onesto.
+    - Ini pekerjaan yang jujur.
+  - key: Cutscene_Boss_GoodPay
+    translations:
+    - Good pay.
+    - Buona paga.
+    - Gaji bagus.
+  - key: Cutscene_Boss_WarmCustomers
+    translations:
+    - Warm customers.
+    - Clienti calorosi.
+    - Pelanggan yang hangat.
+  - key: Cutscene_Boss_FreeMeals
+    translations:
+    - Free meals.
+    - Pasti gratis.
+    - Makanan gratis.
+  - key: Cutscene_Boss_FreeAccommodation
+    translations:
+    - Free accommodation.
+    - Alloggio gratuito.
+    - Akomodasi gratis.
+  - key: Cutscene_Boss_DebtPaid
+    translations:
+    - Once your debt is paid...
+    - Una volta saldato il debito...
+    - Setelah utangmu lunas...
+  - key: Cutscene_Boss_FreeToLeave
+    translations:
+    - You're free to leave.
+    - Sei libero di andartene.
+    - Kamu bebas pergi.
+  - key: Cutscene_MC_Family
+    translations:
+    - And my family?
+    - E la mia famiglia?
+    - Dan keluargaku?
+  - key: Cutscene_Boss_FamilySafe
+    translations:
+    - They'll stay somewhere safe until then.
+    - Resteranno in un posto sicuro fino ad allora.
+    - Mereka akan tinggal di tempat yang aman sampai saat itu.
+  - key: Cutscene_Boss_Motivation
+    translations:
+    - Think of it as... motivation.
+    - Consideralo come... motivazione.
+    - Anggap saja sebagai... motivasi.
+  - key: Cutscene_MC_NoChoice
+    translations:
+    - I don't really have another choice.
+    - Non ho davvero altra scelta.
+    - Aku tidak punya pilihan lain.
+  - key: Cutscene_Boss_Wonderful
+    translations:
+    - Wonderful.
+    - Meraviglioso.
+    - Luar biasa.
+  - key: Tutorial_Giovanna_Oh
+    translations:
+    - Oh?
+    - Oh?
+    - Oh?
+  - key: Tutorial_Giovanna_NewBartender
+    translations:
+    - So you're our new bartender.
+    - Quindi sei il nostro nuovo barista.
+    - Jadi kamu bartender baru kita.
+  - key: Tutorial_MC_Guess
+    translations:
+    - I guess I am.
+    - Immagino di sì.
+    - Sepertinya begitu.
+  - key: Tutorial_Giovanna_Hmm
+    translations:
+    - Hmm...
+    - Mmm...
+    - Hmm...
+  - key: Tutorial_Giovanna_Cuter
+    translations:
+    - You're cuter than I expected.
+    - Sei più carino di quanto pensassi.
+    - Kamu lebih imut dari yang kukira.
+  - key: Tutorial_MC_Uh
+    translations:
+    - Uh...
+    - Ehm...
+    - Eh...
+  - key: Tutorial_Giovanna_Relax
+    translations:
+    - Relax.
+    - Rilassati.
+    - Santai.
+  - key: Tutorial_Giovanna_Teasing
+    translations:
+    - I'm just teasing.
+    - Sto solo scherzando.
+    - Aku hanya bercanda.
+  - key: Tutorial_Giovanna_Name
+    translations:
+    - My name's Giovanna.
+    - Mi chiamo Giovanna.
+    - Namaku Giovanna.
+  - key: Tutorial_Giovanna_Training
+    translations:
+    - I'll be training you today.
+    - Ti addestrerò io oggi.
+    - Aku akan melatihmu hari ini.
+  - key: Tutorial_MC_NiceToMeet
+    translations:
+    - Nice to meet you.
+    - Piacere di conoscerti.
+    - Senang bertemu denganmu.
+  - key: Tutorial_Giovanna_IsIt
+    translations:
+    - Is it?
+    - Davvero?
+    - Benarkah?
+  - key: Tutorial_Giovanna_Kidding
+    translations:
+    - Kidding.
+    - Scherzo.
+    - Bercanda.
+  - key: Tutorial_Giovanna_ComeOn
+    translations:
+    - Come on.
+    - Dai.
+    - Ayo.
+  - key: Tutorial_Giovanna_ShowAround
+    translations:
+    - Let me show you around.
+    - Lascia che ti faccia un giro.
+    - Biarkan aku menunjukkan sekeliling.
+  - key: System_MoveLeftRight
+    translations:
+    - Press A or D to move.
+    - Premi A o D per muoverti.
+    - Tekan A atau D untuk bergerak.
+  - key: Tutorial_Giovanna_Nice
+    translations:
+    - Nice.
+    - Bene.
+    - Bagus.
+  - key: Tutorial_Giovanna_GetUsed
+    translations:
+    - You'll get used to moving around here.
+    - Ti abituerai a muoverti qui.
+    - Kamu akan terbiasa bergerak di sini.
+  - key: Tutorial_Giovanna_SecondHome
+    translations:
+    - This place becomes your second home pretty quickly.
+    - Questo posto diventa la tua seconda casa molto velocemente.
+    - Tempat ini menjadi rumah keduamu dengan cepat.
+  - key: Tutorial_Giovanna_Quiet
+    translations:
+    - You seem quiet.
+    - Sembri silenzioso.
+    - Kamu tampak pendiam.
+  - key: Tutorial_MC_Thinking
+    translations:
+    - Just thinking.
+    - Stavo pensando.
+    - Hanya berpikir.
+  - key: Tutorial_Giovanna_Family
+    translations:
+    - About your family?
+    - Alla tua famiglia?
+    - Tentang keluargamu?
+  - key: Tutorial_MC_Yeah
+    translations:
+    - Yeah.
+    - Sì.
+    - Iya.
+  - key: Tutorial_Giovanna_FinishDebt
+    translations:
+    - Finish paying your debt.
+    - Finisci di pagare il tuo debito.
+    - Selesaikan membayar utangmu.
+  - key: Tutorial_Giovanna_SeeThem
+    translations:
+    - Then you'll see them again.
+    - Poi li rivedrai.
+    - Lalu kamu akan bertemu mereka lagi.
+  - key: Tutorial_Giovanna_Simple
+    translations:
+    - Simple.
+    - Semplice.
+    - Sederhana.
+  - key: Tutorial_MC_Hope
+    translations:
+    - I hope so.
+    - Lo spero.
+    - Kuharap begitu.
+  - key: Tutorial_Giovanna_Hope
+    translations:
+    - Hope is healthy.
+    - La speranza fa bene.
+    - Harapan itu sehat.
+  - key: Tutorial_Giovanna_Anyway
+    translations:
+    - Anyway.
+    - Comunque.
+    - Bagaimanapun.
+  - key: Tutorial_Giovanna_Fun
+    translations:
+    - Let's do something more fun.
+    - Facciamo qualcosa di più divertente.
+    - Ayo lakukan sesuatu yang lebih menyenangkan.
+  - key: Tutorial_Giovanna_MakingDrinks
+    translations:
+    - Making drinks.
+    - Preparare drink.
+    - Membuat minuman.
+  - key: System_OpenRecipeBook
+    translations:
+    - Approach the recipe book and press F to open it.
+    - Avvicinati al libro delle ricette e premi F per aprirlo.
+    - Dekati buku resep dan tekan F untuk membukanya.
+  - key: System_CloseRecipeBook
+    translations:
+    - Press ESC to close the recipe book.
+    - Premi ESC per chiudere il libro delle ricette.
+    - Tekan ESC untuk menutup buku resep.
+  - key: Tutorial_Giovanna_EveryDrink
+    translations:
+    - Every drink has a recipe.
+    - Ogni drink ha una ricetta.
+    - Setiap minuman punya resep.
+  - key: Tutorial_Giovanna_FollowExactly
+    translations:
+    - Follow it exactly.
+    - Seguila esattamente.
+    - Ikuti dengan tepat.
+  - key: Tutorial_Giovanna_Consistency
+    translations:
+    - Customers appreciate consistency.
+    - I clienti apprezzano la coerenza.
+    - Pelanggan menghargai konsistensi.
+  - key: Tutorial_Giovanna_DontCreative
+    translations:
+    - Don't get creative unless someone asks.
+    - Non essere creativo a meno che qualcuno non lo chieda.
+    - Jangan berkreativitas kecuali diminta.
+  - key: Tutorial_Marco_Hey
+    translations:
+    - Hey!
+    - Ehi!
+    - Hei!
+  - key: Tutorial_Marco_Interrupting
+    translations:
+    - Am I interrupting?
+    - Sto interrompendo?
+    - Apakah aku mengganggu?
+  - key: Tutorial_Giovanna_PerfectTiming
+    translations:
+    - Perfect timing.
+    - Tempismo perfetto.
+    - Waktu yang tepat.
+  - key: Tutorial_Giovanna_MeetMarco
+    translations:
+    - Marco. Meet our new bartender.
+    - Marco. Conosci il nostro nuovo barista.
+    - Marco. Temui bartender baru kita.
+  - key: Tutorial_Marco_Nice
+    translations:
+    - Nice. Don't worry. I don't bite.
+    - Bello. Non preoccuparti. Non mordo.
+    - Bagus. Jangan khawatir. Aku tidak menggigit.
+  - key: Tutorial_Giovanna_MostDays
+    translations:
+    - Most days.
+    - La maggior parte dei giorni.
+    - Sebagian besar hari.
+  - key: Tutorial_Marco_Hey2
+    translations:
+    - Hey!
+    - Ehi!
+    - Hei!
+  - key: Tutorial_Giovanna_OldFashioned
+    translations:
+    - You'll be making Marco an Old Fashioned.
+    - Preparerai per Marco un Old Fashioned.
+    - Kamu akan membuatkan Marco Old Fashioned.
+  - key: Tutorial_Marco_LuckyMe
+    translations:
+    - Lucky me. Let's see what you've got.
+    - Fortunato me. Vediamo cosa sai fare.
+    - Beruntung aku. Mari lihat kemampuanmu.
+  - key: System_CustomerClick
+    translations:
+    - Click on the seated customer (Marco) to start.
+    - Nothing.
+    - Klik kustomer yang telah duduk (Marco) untuk memulai.
+  - key: System_AddSugarCube
+    translations:
+    - Click SugarCube on the shelf, then click the Glass to add it.
+    - Clicca su Zucchero sullo scaffale, poi clicca sul Bicchiere per aggiungerlo.
+    - Klik Gula Batu di rak, lalu klik Gelas untuk menambahkannya.
+  - key: Tutorial_Giovanna_Precision
+    translations:
+    - Exactly. Precision matters.
+    - Esattamente. La precisione conta.
+    - Tepat. Ketepatan itu penting.
+  - key: System_AddBitters
+    translations:
+    - Click Bitters on the shelf, then click the Glass. Repeat 3 times.
+    - Clicca su Bitter sullo scaffale, poi clicca sul Bicchiere. Ripeti 3 volte.
+    - Klik Bitters di rak, lalu klik Gelas. Ulangi 3 kali.
+  - key: Tutorial_Giovanna_Steady
+    translations:
+    - Nice and steady.
+    - Piano e costante.
+    - Pelan dan mantap.
+  - key: System_CutChunkyIce
+    translations:
+    - Click ChunkyIce on the shelf, then click the Cutting Board to break it into Ice.
+    - Clicca su ChunkyIce sullo scaffale, poi clicca sul Tagliere per romperlo in Ghiaccio.
+    - Klik ChunkyIce di rak, lalu klik Talenan untuk memecahnya menjadi Es.
+  - key: Tutorial_Giovanna_CutIce
+    translations:
+    - Fresh ice, not too small, not too large. The right size keeps the drink cold without watering it down.
+    - Ghiaccio fresco, non troppo piccolo, non troppo grande. La giusta dimensione mantiene il drink freddo senza diluirlo.
+    - Es segar, tidak terlalu kecil, tidak terlalu besar. Ukuran yang tepat menjaga minuman tetap dingin tanpa mengencerkannya.
+  - key: System_AddIce
+    translations:
+    - Now click the Glass to add the Ice.
+    - Ora clicca sul Bicchiere per aggiungere il Ghiaccio.
+    - Sekarang klik Gelas untuk menambahkan Es.
+  - key: Tutorial_Giovanna_Perfect
+    translations:
+    - Perfect.
+    - Perfetto.
+    - Sempurna.
+  - key: System_PourWhiskey
+    translations:
+    - Click Whiskey on the shelf, then click the Glass to pour it.
+    - Clicca su Whisky sullo scaffale, poi clicca sul Bicchiere per versarlo.
+    - Klik Wiski di rak, lalu klik Gelas untuk menuangkannya.
+  - key: Tutorial_Giovanna_Spill
+    translations:
+    - Don't spill it.
+    - Non versarlo.
+    - Jangan tumpahkan.
+  - key: Tutorial_Marco_Expensive
+    translations:
+    - That's the expensive stuff.
+    - Quella è roba costosa.
+    - Itu barang mahal.
+  - key: System_Stir
+    translations:
+    - Click the Bar Spoon, then click the Glass to stir.
+    - Clicca sul Cucchiaio da Bar, poi clicca sul Bicchiere per mescolare.
+    - Klik Sendok Bar, lalu klik Gelas untuk mengaduk.
+  - key: Tutorial_Giovanna_Circles
+    translations:
+    - Smooth circles. Don't rush.
+    - Cerchi lisci. Non avere fretta.
+    - Lingkaran halus. Jangan terburu-buru.
+  - key: System_CutOrange
+    translations:
+    - Click Orange on the shelf, then click the Cutting Board to slice it.
+    - Clicca su Arancia sullo scaffale, poi clicca sul Tagliere per affettarla.
+    - Klik Jeruk di rak, lalu klik Talenan untuk mengirisnya.
+  - key: Tutorial_Giovanna_CutOrange
+    translations:
+    - A fresh orange peel, not too thick. The oils in the skin are what give the drink its aroma.
+    - Una buccia d'arancia fresca, non troppo spessa. Gli oli nella pelle sono ciò che danno l'aroma al drink.
+    - Kulit jeruk segar, tidak terlalu tebal. Minyak di kulitnya yang memberi aroma pada minuman.
+  - key: System_GarnishOrange
+    translations:
+    - Now click the Glass to add the Orange Peel garnish.
+    - Ora clicca sul Bicchiere per aggiungere la guarnizione di buccia d'arancia.
+    - Sekarang klik Gelas untuk menambahkan hiasan Kulit Jeruk.
+  - key: Tutorial_Giovanna_Presentation
+    translations:
+    - Presentation matters.
+    - La presentazione conta.
+    - Presentasi itu penting.
+  - key: Tutorial_Marco_LookingGood
+    translations:
+    - Looking good already.
+    - Già si vede bene.
+    - Sudah terlihat bagus.
+  - key: System_Pour
+    translations:
+    - Click the Glass to pour the finished drink.
+    - Clicca sul Bicchiere per versare il drink finito.
+    - Klik Gelas untuk menuangkan minuman jadi.
+  - key: Tutorial_Giovanna_Pour
+    translations:
+    - Finally, pour the drink into the serving glass. There... your first cocktail. Honestly, I've seen worse.
+    - Infine, versa il drink nel bicchiere da portata. Ecco... il tuo primo cocktail. Onestamente, ne ho visti di peggiori.
+    - Terakhir, tuang minuman ke gelas saji. Itu... koktail pertamamu. Sejujurnya, aku pernah melihat yang lebih buruk.
+  - key: System_ServeDrink
+    translations:
+    - Click on Marco to serve him the drink.
+    - Clicca su Marco per servirgli il drink.
+    - Klik Marco untuk menyajikan minuman kepadanya.
+  - key: Tutorial_Marco_Good
+    translations:
+    - That's actually pretty good.
+    - È davvero buono.
+    - Itu sebenarnya cukup bagus.
+  - key: Tutorial_MC_Really
+    translations:
+    - Really?
+    - Davvero?
+    - Benarkah?
+  - key: Tutorial_Marco_Another
+    translations:
+    - Yeah. I'd order another.
+    - Sì. Ne ordinerei un altro.
+    - Iya. Aku akan pesan lagi.
+  - key: Tutorial_Giovanna_See
+    translations:
+    - See? Told you you'd do fine.
+    - Visto? Te l'avevo detto che saresti stato bravo.
+    - Lihat? Sudah kubilang kamu akan baik-baik saja.
+  - key: Tutorial_MC_Thanks
+    translations:
+    - Thanks.
+    - Grazie.
+    - Terima kasih.
+  - key: Tutorial_Giovanna_KeepDoing
+    translations:
+    - Just keep doing this every day.
+    - Continua a fare questo ogni giorno.
+    - Terus lakukan ini setiap hari.
+  - key: Tutorial_Giovanna_BeforeYouKnow
+    translations:
+    - Before you know it...
+    - Prima ancora che tu te ne accorga...
+    - Sebelum kamu menyadarinya...
+  - key: Tutorial_Giovanna_DebtDisappear
+    translations:
+    - Your debt will disappear.
+    - Il tuo debito scomparirà.
+    - Utangmu akan hilang.
+  - key: Tutorial_MC_AllIWant
+    translations:
+    - That's all I want.
+    - È tutto ciò che voglio.
+    - Itu semua yang kuinginkan.
+  - key: Tutorial_Giovanna_EveryoneSays
+    translations:
+    - I know. Everyone says that.
+    - Lo so. Lo dicono tutti.
+    - Aku tahu. Semua orang bilang begitu.
+  - key: System_SearchMarco
+    translations:
+    - Click on Marco to search his pockets.
+    - Clicca su Marco per perquisire le sue tasche.
+    - Klik Marco untuk menggeledah sakunya.
+  - key: System_InteractWithCustomer
+    translations:
+    - Click on the seated customer to serve them.
+    - Clicca sul cliente seduto per servirlo.
+    - Klik pelanggan yang duduk untuk melayaninya.
+  - key: System_SelectIngredient
+    translations:
+    - Click on an ingredient to select it.
+    - Clicca su un ingrediente per selezionarlo.
+    - Klik bahan untuk memilihnya.
+  - key: System_InteractWithTool
+    translations:
+    - With an ingredient selected, click on a tool to use it.
+    - Con un ingrediente selezionato, clicca su uno strumento per usarlo.
+    - Dengan bahan yang dipilih, klik alat untuk menggunakannya.
+  - key: System_GiovannaWaiting
+    translations:
+    - Giovanna is waiting...
+    - Giovanna sta aspettando...
+    - Giovanna menunggu...
+  - key: System_GoToRecipeBook
+    translations:
+    - Go to the recipe book and press F to open it.
+    - Vai al libro delle ricette e premi F per aprirlo.
+    - Pergilah ke buku resep dan tekan F untuk membukanya.
+  - key: Customer_Reaction_Perfect_1
+    translations:
+    - "Thank you! The {0} is wonderful, I liked it very much!"
+    - "Grazie! Il {0} è meraviglioso, mi è piaciuto moltissimo!"
+    - "Terima kasih! {0}-nya enak sekali, aku sangat suka!"
+  - key: Customer_Reaction_Perfect_2
+    translations:
+    - "Excellent! This {0} is exactly what I needed."
+    - "Eccellente! Questo {0} è esattamente ciò di cui avevo bisogno."
+    - "Luar biasa! {0} ini tepat seperti yang kubutuhkan."
+  - key: Customer_Reaction_Perfect_3
+    translations:
+    - "Perfect! Best {0} I've had all week."
+    - "Perfetto! Il miglior {0} che abbia bevuto questa settimana."
+    - "Sempurna! {0} terbaik yang kuminum minggu ini."
+  - key: Customer_Reaction_Good_1
+    translations:
+    - "Not bad. The {0} is pretty good."
+    - "Niente male. Il {0} è abbastanza buono."
+    - "Lumayan. {0}-nya cukup enak."
+  - key: Customer_Reaction_Good_2
+    translations:
+    - "Hey, this {0} hits the spot. Thanks!"
+    - "Ehi, questo {0} ci sta proprio. Grazie!"
+    - "Hei, {0} ini pas sekali. Terima kasih!"
+  - key: Customer_Reaction_Good_3
+    translations:
+    - "Solid {0}. I'd order this again."
+    - "{0} solido. Lo ordinerei di nuovo."
+    - "{0} yang mantap. Aku mau pesan lagi."
+  - key: Customer_Reaction_Okay_1
+    translations:
+    - "Hmm, the {0} is... drinkable."
+    - "Hmm, il {0} è... bevibile."
+    - "Hmm, {0}-nya... ya lumayan lah."
+  - key: Customer_Reaction_Okay_2
+    translations:
+    - "Well... it's a {0} alright. Not your best."
+    - "Beh... è un {0}, dai. Non il tuo migliore."
+    - "Yah... ini {0} sih. Bukan yang terbaik."
+  - key: Customer_Reaction_Okay_3
+    translations:
+    - "I've had worse {0}s. Barely."
+    - "Ho bevuto {0} peggiori. Per poco."
+    - "Aku pernah minum {0} yang lebih buruk. Dikit."
+  - key: Customer_Reaction_Fail_1
+    translations:
+    - "This {0} is terrible. I'm not paying for this."
+    - "Questo {0} è terribile. Non pago per questo."
+    - "{0} ini buruk sekali. Aku tidak mau bayar."
+  - key: Customer_Reaction_Fail_2
+    translations:
+    - "What is this {0}? Absolutely awful."
+    - "Cos'è questo {0}? Assolutamente orribile."
+    - "Apa-apaan {0} ini? Buruk sekali."
+  - key: Customer_Reaction_Fail_3
+    translations:
+    - "Disgusting. Keep your {0}, I'm leaving."
+    - "Disgustoso. Tieniti il tuo {0}, me ne vado."
+    - "Menjijikkan. Simpan saja {0}-mu, aku pergi."
+  - key: Shift1_System_NewDay
+    translations:
+    - "A New Day Begins."
+    - "Inizia un nuovo giorno."
+    - "Hari baru dimulai."
+  - key: Shift1_MC_FirstDay
+    translations:
+    - "First day..."
+    - "Primo giorno..."
+    - "Hari pertama..."
+  - key: Shift1_MC_CanDoThis
+    translations:
+    - "I can do this."
+    - "Posso farcela."
+    - "Aku pasti bisa."
+  - key: Shift1_MC_JustBartending
+    translations:
+    - "It's just bartending."
+    - "È solo fare il barista."
+    - "Ini cuma bartending."
+  - key: Shift1_MC_WorkHard
+    translations:
+    - "Work hard."
+    - "Lavora sodo."
+    - "Kerja keras."
+  - key: Shift1_MC_PayOffDebt
+    translations:
+    - "Pay off the debt."
+    - "Paga il debito."
+    - "Lunasi hutangnya."
+  - key: Shift1_MC_GoHome
+    translations:
+    - "Go home."
+    - "Torna a casa."
+    - "Pulang."
+  - key: Shift1_MC_AllThereIs
+    translations:
+    - "That's all there is to it."
+    - "È tutto qui."
+    - "Cuma itu saja."
+  - key: Shift2_System_NewDay
+    translations:
+    - "A New Day Begins."
+    - "Inizia un nuovo giorno."
+    - "Hari baru dimulai."
+  - key: Shift2_MC_NotSoBad
+    translations:
+    - "Yesterday wasn't so bad."
+    - "Ieri non è stato così male."
+    - "Kemarin nggak terlalu buruk."
+  - key: Shift2_MC_NicerThanExpected
+    translations:
+    - "The customers were nicer than I expected."
+    - "I clienti erano più gentili di quanto mi aspettassi."
+    - "Pelanggannya lebih baik dari yang kukira."
+  - key: Shift2_MC_EveryDayLikeThat
+    translations:
+    - "If every day goes like that..."
+    - "Se ogni giorno va così..."
+    - "Kalau setiap hari seperti itu..."
+  - key: Shift2_MC_ReallyCanPay
+    translations:
+    - "Maybe I really can pay this off."
+    - "Forse posso davvero pagare tutto."
+    - "Mungkin aku benar-benar bisa melunasinya."
+  - key: Shift2_MC_WonderFamily
+    translations:
+    - "I wonder what my family's doing right now."
+    - "Chissà cosa sta facendo la mia famiglia adesso."
+    - "Aku penasaran apa yang dilakukan keluargaku sekarang."
+  - key: Shift2_MC_EatingWell
+    translations:
+    - "I hope they're eating well."
+    - "Spero che stiano mangiando bene."
+    - "Semoga mereka makan dengan cukup."
+  - key: Shift3_System_NewDay
+    translations:
+      - "Approximately Four Months Later."
+      - "Circa quattro mesi dopo."
+      - "Sekitar empat bulan kemudian."
+  - key: Shift3_MC_DebtBarelyMoved
+    translations:
+    - "The debt barely moved."
+    - "Il debito si è a malapena mosso."
+    - "Hutangnya hampir nggak berkurang."
+  - key: Shift3_MC_JustStarted
+    translations:
+    - "Maybe it's because I just started."
+    - "Forse è perché ho appena iniziato."
+    - "Mungkin karena aku baru mulai."
+  - key: Shift3_MC_GetBetter
+    translations:
+    - "It'll get better."
+    - "Andrà meglio."
+    - "Pasti akan lebih baik."
+  - key: Shift3_MC_HasTo
+    translations:
+    - "It has to."
+    - "Deve andare meglio."
+    - "Harus begitu."
+  - key: Shift3_MC_KeepWorking
+    translations:
+    - "Just keep working."
+    - "Continua a lavorare."
+    - "Kerja saja terus."
+  - key: Shift4_System_NewDay
+    translations:
+      - "Two Years Later."
+      - "Due anni dopo."
+      - "Dua tahun kemudian."
+  - key: Shift4_MC_FourDays
+    translations:
+      - "Wow... Time really flies."
+      - "Wow... Il tempo vola davvero."
+      - "Wah... Waktu benar-benar berlalu begitu cepat."
+  - key: Shift4_MC_NothingFromThem
+    translations:
+    - "I still haven't heard anything from them."
+    - "Non ho ancora ricevuto notizie da loro."
+    - "Aku masih belum dengar kabar dari mereka."
+  - key: Shift4_MC_NoLetters
+    translations:
+    - "No letters."
+    - "Nessuna lettera."
+    - "Nggak ada surat."
+  - key: Shift4_MC_NoPhoneCalls
+    translations:
+    - "No phone calls."
+    - "Nessuna telefonata."
+    - "Nggak ada telepon."
+  - key: Shift4_MC_ShouldAskBoss
+    translations:
+    - "I should ask the Boss after today's shift."
+    - "Dovrei chiedere al Boss dopo il turno di oggi."
+    - "Aku harus tanya si Bos setelah shift hari ini."
+  - key: Shift4_MC_ThereIsReason
+    translations:
+    - "I'm sure there's a reason."
+    - "Sono sicuro che ci sia un motivo."
+    - "Pasti ada alasannya."
+  - key: Shift5_System_CustomerArrived
+    translations:
+    - "A Customer Has Arrived."
+    - "Un cliente è arrivato."
+    - "Seorang pelanggan telah tiba."
+  - key: Shift5_Boss_GoodEvening
+    translations:
+    - "Good evening."
+    - "Buonasera."
+    - "Selamat malam."
+  - key: Shift5_MC_Boss
+    translations:
+    - "Boss?"
+    - "Boss?"
+    - "Bos?"
+  - key: Shift5_Boss_FavoriteDrink
+    translations:
+    - "Mind making me your favorite drink?"
+    - "Ti dispiace prepararmi il tuo drink migliore?"
+    - "Bisa buatkan minuman favoritmu untukku?"
+  - key: Shift5_MC_OfCourse
+    translations:
+    - "Of course."
+    - "Certamente."
+    - "Tentu saja."
+  - key: Shift5_Boss_Delicious
+    translations:
+    - "Delicious."
+    - "Delizioso."
+    - "Enak."
+  - key: Shift5_Boss_Improved
+    translations:
+    - "You've improved."
+    - "Sei migliorato."
+    - "Kamu sudah berkembang."
+  - key: Shift5_MC_ThankYou
+    translations:
+    - "Thank you."
+    - "Grazie."
+    - "Terima kasih."
+  - key: Shift5_MC_Actually
+    translations:
+    - "Actually..."
+    - "A dire il vero..."
+    - "Sebenarnya..."
+  - key: Shift5_MC_AskSomething
+    translations:
+    - "Could I ask you something?"
+    - "Posso chiederti una cosa?"
+    - "Boleh aku tanya sesuatu?"
+  - key: Shift5_Boss_Certainly
+    translations:
+    - "Certainly."
+    - "Certamente."
+    - "Tentu saja."
+  - key: Shift5_MC_MyDebt
+    translations:
+    - "My debt..."
+    - "Il mio debito..."
+    - "Hutangku..."
+  - key: Shift5_MC_WorkingEveryDay
+    translations:
+    - "I've been working every day."
+    - "Ho lavorato ogni giorno."
+    - "Aku sudah kerja setiap hari."
+  - key: Shift5_MC_DoesntGetSmaller
+    translations:
+    - "But it doesn't seem to get any smaller."
+    - "Ma non sembra diminuire."
+    - "Tapi nggak kelihatan berkurang."
+  - key: Shift5_MC_AndMyFamily
+    translations:
+    - "And my family..."
+    - "E la mia famiglia..."
+    - "Dan keluargaku..."
+  - key: Shift5_MC_HaventSeenThem
+    translations:
+    - "I haven't seen them once."
+    - "Non li ho visti nemmeno una volta."
+    - "Aku belum pernah melihat mereka sekali pun."
+  - key: Shift5_MC_SaidTheyBeSafe
+    translations:
+    - "You said they'd be safe."
+    - "Avevi detto che sarebbero stati al sicuro."
+    - "Katamu mereka akan aman."
+  - key: Shift5_Boss_TheyWere
+    translations:
+    - "They were."
+    - "Lo erano."
+    - "Mereka aman."
+  - key: Shift5_MC_What
+    translations:
+    - "What?"
+    - "Cosa?"
+    - "Apa?"
+  - key: Shift5_Boss_SaidTheyWereSafe
+    translations:
+    - "I said they were safe."
+    - "Ho detto che erano al sicuro."
+    - "Aku bilang mereka aman."
+  - key: Shift5_Boss_PastTense
+    translations:
+    - "Past tense."
+    - "Passato."
+    - "Masa lalu."
+  - key: Shift5_MC_DontUnderstand
+    translations:
+    - "I don't understand."
+    - "Non capisco."
+    - "Aku nggak ngerti."
+  - key: Shift5_Boss_DebtConsiderable
+    translations:
+    - "Your debt was... considerable."
+    - "Il tuo debito era... considerevole."
+    - "Hutangmu... cukup besar."
+  - key: Shift5_Boss_Unfortunately
+    translations:
+    - "Unfortunately..."
+    - "Sfortunatamente..."
+    - "Sayangnya..."
+  - key: Shift5_Boss_PerformanceNotEnough
+    translations:
+    - "Your performance wasn't enough."
+    - "La tua performance non era sufficiente."
+    - "Kinerjamu tidak cukup."
+  - key: Shift5_MC_WhatTalkingAbout
+    translations:
+    - "What are you talking about?"
+    - "Di cosa stai parlando?"
+    - "Apa yang kamu bicarakan?"
+  - key: Shift5_Boss_RecoverInvestment
+    translations:
+    - "We had to recover our investment somehow."
+    - "Dovevamo recuperare il nostro investimento in qualche modo."
+    - "Kami harus mengembalikan investasi kami."
+  - key: Shift5_Boss_WifeCompatible
+    translations:
+    - "Your wife was compatible."
+    - "Tua moglie era compatibile."
+    - "Istrimu cocok."
+  - key: Shift5_Boss_ChildAsWell
+    translations:
+    - "Your child as well."
+    - "Anche tuo figlio."
+    - "Anakmu juga."
+  - key: Shift5_Boss_OrgansSoldWell
+    translations:
+    - "Their organs sold surprisingly well."
+    - "I loro organi hanno venduto sorprendentemente bene."
+    - "Organ mereka terjual dengan sangat baik."
+  - key: Shift5_MC_No
+    translations:
+    - "No..."
+    - "No..."
+    - "Tidak..."
+  - key: Shift5_MC_YoureLying
+    translations:
+    - "You're lying."
+    - "Stai mentendo."
+    - "Kamu bohong."
+  - key: Shift5_Boss_RarelyLie
+    translations:
+    - "I rarely lie."
+    - "Raramente mento."
+    - "Aku jarang bohong."
+  - key: Shift5_Boss_BadForBusiness
+    translations:
+    - "It's bad for business."
+    - "Fa male agli affari."
+    - "Itu buruk untuk bisnis."
+  - key: Shift5_MC_No2
+    translations:
+    - "No..."
+    - "No..."
+    - "Tidak..."
+  - key: Shift5_MC_NO
+    translations:
+    - "NO!"
+    - "NO!"
+    - "TIDAK!"
+  - key: Shift5_Boss_Please
+    translations:
+    - "Please."
+    - "Per favore."
+    - "Tolong."
+  - key: Shift5_Boss_LowerVoice
+    translations:
+    - "Lower your voice."
+    - "Abbassa la voce."
+    - "Kecilkan suaramu."
+  - key: Shift5_Boss_DisturbCustomers
+    translations:
+    - "You'll disturb the customers."
+    - "Disturberai i clienti."
+    - "Kamu akan mengganggu pelanggan."
+  - key: Shift5_MC_YouPromised
+    translations:
+    - "You promised..."
+    - "Avevi promesso..."
+    - "Kamu janji..."
+  - key: Shift5_Boss_PromisedTakenCare
+    translations:
+    - "I promised they would be taken care of."
+    - "Ho promesso che sarebbero stati accuditi."
+    - "Aku janji mereka akan diurus."
+  - key: Shift5_Boss_AndTheyWere
+    translations:
+    - "And they were."
+    - "E lo sono stati."
+    - "Dan memang begitu."
+  - key: Shift5_Boss_EveryPartBuyer
+    translations:
+    - "Every part of them found a buyer."
+    - "Ogni parte di loro ha trovato un acquirente."
+    - "Setiap bagian dari mereka laku terjual."
+  - key: Shift5_MC_Monster
+    translations:
+    - "Monster..."
+    - "Mostro..."
+    - "Monster..."
+  - key: Shift5_Boss_No
+    translations:
+    - "No."
+    - "No."
+    - "Bukan."
+  - key: Shift5_Boss_Businessman
+    translations:
+    - "Businessman."
+    - "Uomo d'affari."
+    - "Pebisnis."
+  - key: Shift5_Boss_DebtExceedsValue
+    translations:
+    - "Your debt still exceeds your value."
+    - "Il tuo debito supera ancora il tuo valore."
+    - "Hutangmu masih melebihi nilaimu."
+  - key: Shift5_Boss_Fortunately
+    translations:
+    - "Fortunately..."
+    - "Fortunatamente..."
+    - "Untungnya..."
+  - key: Shift5_Boss_YoureHealthy
+    translations:
+    - "You're healthy."
+    - "Sei in salute."
+    - "Kamu sehat."
+  - key: Shift5_Boss_OrgansCoverRest
+    translations:
+    - "Your organs should cover what's left."
+    - "I tuoi organi dovrebbero coprire il resto."
+    - "Organmu seharusnya bisa menutupi sisanya."
+  - key: Shift5_MC_Please
+    translations:
+    - "Please..."
+    - "Ti prego..."
+    - "Kumohon..."
+  - key: Shift5_MC_PleaseDont
+    translations:
+    - "Please don't—"
+    - "Ti prego non—"
+    - "Kumohon jangan—"
+  - key: Shift5_Boss_ThankYouService
+    translations:
+    - "Thank you for your service."
+    - "Grazie per il tuo servizio."
+    - "Terima kasih atas pelayananmu."
+  - key: Shift5_Boss_ExcellentDrinks
+    translations:
+    - "You made excellent drinks."
+    - "Hai fatto degli ottimi drink."
+    - "Kamu membuat minuman yang luar biasa."
+  - key: Shift5_System_EndOfGame
+    translations:
+      - "End of Game. Thank you for playing.\nYou will be redirected to the Main Menu.You can read the aftermath lore on our itch.io page."
+      - "Fine del gioco. Grazie per aver giocato.\nVerrai reindirizzato al menu principale.Puoi leggere l'epilogo sulla nostra pagina itch.io."
+      - "Permainan Selesai. Terima kasih telah bermain.\nKamu akan diarahkan kembali ke Menu Utama.Kamu dapat membaca cerita setelah akhir permainan di halaman itch.io kami."

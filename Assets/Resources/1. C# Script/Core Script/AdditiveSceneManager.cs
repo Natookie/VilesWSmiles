@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 using System.Collections.Generic;
 
 public class AdditiveSceneManager : MonoBehaviour
 {
     public static AdditiveSceneManager Instance { get; private set; }
     private HashSet<string> loadedScenes = new HashSet<string>();
-    private HashSet<string> loadingScenes = new HashSet<string>();
+    private Dictionary<string, AsyncOperation> activeLoads = new Dictionary<string, AsyncOperation>();
 
     void Awake(){
         if(Instance != null && Instance != this){
@@ -25,30 +26,33 @@ public class AdditiveSceneManager : MonoBehaviour
         }
     }
 
-    public AsyncOperation LoadScene(string sceneName){
+    public IEnumerator LoadSceneCoroutine(string sceneName){
         if(SceneManager.GetSceneByName(sceneName).isLoaded){
             loadedScenes.Add(sceneName);
-            return null;
+            yield break;
         }
 
-        if(loadingScenes.Contains(sceneName)) return null;
-        loadingScenes.Add(sceneName);
+        if(activeLoads.ContainsKey(sceneName)){
+            yield return new WaitUntil(() => !activeLoads.ContainsKey(sceneName));
+            yield break;
+        }
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
-
+        
         if(operation == null){
-            loadingScenes.Remove(sceneName);
-            return null;
+            yield break;
         }
 
-        operation.completed += (op) =>{
-            loadingScenes.Remove(sceneName);
+        activeLoads[sceneName] = operation;
+        yield return operation;
+        activeLoads.Remove(sceneName);
 
-            if(SceneManager.GetSceneByName(sceneName).isLoaded) loadedScenes.Add(sceneName);
-            else loadedScenes.Remove(sceneName);
-        };
-
-        return operation;
+        if(SceneManager.GetSceneByName(sceneName).isLoaded){
+            loadedScenes.Add(sceneName);
+        }
+        else{
+            loadedScenes.Remove(sceneName);
+        }
     }
 
     public void UnloadScene(string sceneName){

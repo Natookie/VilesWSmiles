@@ -14,12 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioLibrary
   bgmTracks:
   - track: 0
-    clip: {fileID: 8300000, guid: 2201cdb9b3f07bf45a34166d610011e7, type: 3}
+    clip: {fileID: 8300000, guid: 39a28dbf7ce2fb44788a40c1ae006c40, type: 3}
   sfxSounds:
   - sound: 0
-    clip: {fileID: 8300000, guid: 1eb8c11ee0121d64581b0070b1200e1b, type: 3}
+    clip: {fileID: 8300000, guid: 279947676db7afa4cb18c40c7a7f6a1c, type: 3}
+  - sound: 1
+    clip: {fileID: 8300000, guid: 1f10ccc5a8c4ede4dbdc4280ff05ef03, type: 3}
+  - sound: 2
+    clip: {fileID: 8300000, guid: 5b449bc5685ead5428c4414c935a64f3, type: 3}
+  - sound: 3
+    clip: {fileID: 8300000, guid: ca0b8b8af8e97224eb583b355d02fbfe, type: 3}
+  - sound: 4
+    clip: {fileID: 8300000, guid: f4e5c71b79ef92044a9892b0083c4060, type: 3}
+  - sound: 5
+    clip: {fileID: 8300000, guid: ea5727ff90e4e764a8dd8bec2a9b14f3, type: 3}
+  - sound: 6
+    clip: {fileID: 8300000, guid: b7365268da8c1684a94d9b16b42cb179, type: 3}
+  - sound: 7
+    clip: {fileID: 8300000, guid: b03a4e465100f8340b6ae898167379de, type: 3}
   uiSounds:
+  - sound: 1
+    clip: {fileID: 8300000, guid: 931bb13571f91df4fa6327cba10e0dca, type: 3}
   - sound: 0
-    clip: {fileID: 0}
-  - sound: 0
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 6dd693255eac3e44b81d641cdb46d874, type: 3}
+  - sound: 2
+    clip: {fileID: 8300000, guid: b692534aad670074f862f3bd8785ed3b, type: 3}
+  - sound: 3
+    clip: {fileID: 8300000, guid: 02c11567244233545a24df92b06e8e7d, type: 3}
+  - sound: 4
+    clip: {fileID: 8300000, guid: de9445ba0b1f8f84da812b1fea076ba2, type: 3}
+  - sound: 5
+    clip: {fileID: 8300000, guid: c2df5c295e317664f93a8b3eb23f504c, type: 3}
+  - sound: 6
+    clip: {fileID: 8300000, guid: edb3a113d8b1174408ffdca2a4c75756, type: 3}
