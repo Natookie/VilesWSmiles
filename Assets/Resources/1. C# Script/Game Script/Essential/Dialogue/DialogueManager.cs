@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     private float holdTimer;
     private string waitedEventId;
     private SpeakerType currentSpeaker;
+    private bool advancePressed;
 
     void Awake(){
         if(Instance != null && Instance != this){
@@ -23,6 +24,13 @@ public class DialogueManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    void Update(){
+        if(!Keyboard.current.spaceKey.wasPressedThisFrame) return;
+
+        if(dialogueUI.IsTyping()) dialogueUI.SkipTyping();
+        else advancePressed = true;
     }
 
     public void PlayDialogue(SpeakerType speaker, string localizationKey, params object[] args){
@@ -60,24 +68,31 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator WaitForSeconds(float seconds = 0.75f){
         yield return new WaitUntil(() => !dialogueUI.IsTyping());
-        
+
         float timer = 0f;
         while(timer < seconds){
-            // if(Keyboard.current.spaceKey.wasPressedThisFrame) yield break;
             timer += Time.deltaTime;
             yield return null;
         }
     }
 
-    public IEnumerator WaitForKeyPress(KeyCode key){
+    public IEnumerator WaitForSpace(){
         yield return new WaitUntil(() => !dialogueUI.IsTyping());
-        conditionMet = false;
-        InputManager.OnKeyPressed += CheckKey;
-        yield return new WaitUntil(() => conditionMet);
-        InputManager.OnKeyPressed -= CheckKey;
+
+        advancePressed = false;
+        yield return new WaitUntil(() => advancePressed);
+        advancePressed = false;
     }
 
-    void CheckKey(KeyCode pressedKey) => conditionMet = true;
+    public IEnumerator WaitForKeyPress(KeyCode key){
+        yield return new WaitUntil(() => !dialogueUI.IsTyping());
+        bool pressed = false;
+        void Handler(KeyCode k){ if(k == key) pressed = true; }
+        InputManager.OnKeyPressed += Handler;
+
+        try{yield return new WaitUntil(() => pressed);}
+        finally{InputManager.OnKeyPressed -= Handler;}
+    }
 
     public IEnumerator WaitForInteraction(string eventId){
         yield return new WaitUntil(() => !dialogueUI.IsTyping());

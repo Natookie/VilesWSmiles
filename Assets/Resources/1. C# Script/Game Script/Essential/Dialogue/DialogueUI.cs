@@ -22,15 +22,11 @@ public class DialogueUI : MonoBehaviour
     public System.Action OnTypingComplete;
 
     private Coroutine typewriterRoutine;
-    private bool isTyping;
+    public bool isTyping;
     private string fullText;
 
     void Start(){
         HideDialogue();
-    }
-
-    void Update(){
-        if(isTyping && Keyboard.current.spaceKey.wasPressedThisFrame) SkipTyping();
     }
 
     public void ShowDialogue(SpeakerType speakerType, string text){
