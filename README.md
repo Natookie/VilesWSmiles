@@ -29,6 +29,16 @@
 
 [![Play on itch.io](https://img.shields.io/badge/Play%20on-itch.io-fa5c5c?logo=itchdotio&logoColor=white)](https://natookie.itch.io/viles-w-smiles)
 
+## Contributors
+
+| Contributor | Role | Contribution |
+|---|---|---|
+| **Natanael Kevin Kurniawan** | **Game Programmer & Game Designer** | Designed and implemented the game's core gameplay loop and primary mechanics, translating the game's concept into its playable systems and interactions. |
+| **Erika Gabriela** | **2D Artist** | Created the game's environments and character artwork using a distinctive line-art visual style, establishing the project's overall visual identity. |
+| **Dave Franklin** | **UI Artist** | Designed the UI workflow and wireframes, establishing the interface structure and user flow. Also created the supporting UI iconography and visual assets. |
+
+## Time Spent: 2 Days / ~44 Hours
+
 ## Features
 
 - Customer-driven drink orders with randomized and predefined shift data.
@@ -92,13 +102,3 @@ The repository also contains bundled or supporting packages and tools, including
 - Input is configured in `Assets/InputSystem_Actions.inputactions`. Player movement supports keyboard A/D and arrow keys; interaction is bound to F, with UI navigation and pause/inventory actions also defined in the asset.
 - The project uses the Input System, Universal Render Pipeline, Cinemachine, UGUI, Timeline, and Unity 2D packages declared in `Packages/manifest.json`.
 - The configured default player resolution is 1920x1080.
-
-## Contributors
-
-| Contributor | Role | Contribution |
-|---|---|---|
-| **Natanael Kevin Kurniawan** | **Game Programmer & Game Designer** | Designed and implemented the game's core gameplay loop and primary mechanics, translating the game's concept into its playable systems and interactions. |
-| **Erika Gabriela** | **2D Artist** | Created the game's environments and character artwork using a distinctive line-art visual style, establishing the project's overall visual identity. |
-| **Dave Franklin** | **UI Artist** | Designed the UI workflow and wireframes, establishing the interface structure and user flow. Also created the supporting UI iconography and visual assets. |
-
-## Time Spent: 2 Days / ~44 Hours
