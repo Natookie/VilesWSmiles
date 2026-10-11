@@ -55,8 +55,8 @@
 ```mermaid
 graph TD
     Project[Unity Project] --> Scenes[Assets/Scenes]
-    Project --> Scripts[Assets/Resources/1. C# Script]
-    Project --> Data[Assets/Resources/3. Data]
+    Project --> Scripts[Assets/_Projects/1. C# Script]
+    Project --> Data[Assets/_Projects/3. Data]
     Project --> Input[Assets/InputSystem_Actions.inputactions]
 
     Scenes --> Core[Core.unity]
@@ -79,10 +79,10 @@ graph TD
 The main authored areas are:
 
 - `Assets/Scenes`: the four scenes included in the build, with `Core` listed first.
-- `Assets/Resources/1. C# Script/Core Script`: scene loading, game state, flow, saving, audio, localization, and camera/light management.
-- `Assets/Resources/1. C# Script/Game Script`: player interaction, customers, shifts, recipes, drink preparation, and dialogue.
-- `Assets/Resources/1. C# Script/UI`: menu, recipe-book, status, and reusable UI behavior.
-- `Assets/Resources/3. Data`: serialized configuration, audio, fonts, prefabs, dialogue, localization, and order data.
+- `Assets/_Projects/1. C# Script/Core Script`: scene loading, game state, flow, saving, audio, localization, and camera/light management.
+- `Assets/_Projects/1. C# Script/Game Script`: player interaction, customers, shifts, recipes, drink preparation, and dialogue.
+- `Assets/_Projects/1. C# Script/UI`: menu, recipe-book, status, and reusable UI behavior.
+- `Assets/_Projects/3. Data`: serialized configuration, audio, fonts, prefabs, dialogue, localization, and order data.
 
 The repository also contains bundled or supporting packages and tools, including Nova UI, NaughtyAttributes, Sortify, TimeScale Toolbar, TextMesh Pro, and related editor assets.
 
